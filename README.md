@@ -47,6 +47,7 @@ Le fichier `package.json` contient plusieurs `scripts` qui vous seront utiles:
 - `npm run build` : permet de compiler le projet en typescript.
 - `npm run type-check` : permet de vérifier les types.
 - `npm run test` : permet de lancer les tests.
+- `npm run test:coverage` : permet de lancer les tests et de générer un rapport de coverage.
 - `npm run start` : permet de lancer le serveur en mode production.
 
 #### Base de données
@@ -243,7 +244,7 @@ Ajouter les endpoints CRUD manquants pour les utilisateurs.
 
 ### Coverage 100% `(+1 points)`
 
-Avoir un coverage de test de 100% en plus des tests demandés par défaut.
+Avoir un coverage de test de 100% en plus des tests demandés par défaut. Pour tester cela vous pouvez utiliser la commande `npm run test:coverage`.
 
 ### Weakness `(+1,5 points)`
 
