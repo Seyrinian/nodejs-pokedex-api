@@ -291,3 +291,22 @@ Ajouter la possibilité de gérer des decks de cartes pokémons. Un deck est une
 - Pour les permissions vous vérifierez qu'il faut être connecté pour créer, modifier ou supprimer un deck.
 - Vous ajouterez des tests pour ces endpoints.
 - Vous ajouterez la documentation Swagger pour ces endpoints.
+
+
+### Collection (`+3 points`)
+
+Ajouter la possibilité d'avoir une collection de cartes. Une colection est un ensemble de carte appartenant à un joueur en particulier. Vous ajouterez une table `collection` qui contiendra les informations ci-dessous.
+
+| Nom   | Type               | Propriété            | Description                |
+| ----- | ------------------ | -------------------- | -------------------------- |
+| id    | Number             | clé primaire         | Identifiant unique du deck |
+| card | REF(PokemonCard) | requis, relation N-N | Carte appartenant à la collection             |
+| owner | REF(User)          | requis, relation 1-1 | Propriétaire du deck       |
+
+- Un utilisateur ne possède qu'une seule collection.
+- Une carte pokémon peut appartenir à plusieurs collections (relation N-N).
+- Vous ajouterez aussi des endpoints pour gérer ces collections (CRUD).
+- Lorsque la collection est créé vous baserez le propriétaire sur l'utilisateur connecté (via son JWT).
+- Pour les permissions vous vérifierez qu'il faut être connecté pour créer, modifier ou supprimer une collection.
+- Vous ajouterez des tests pour ces endpoints.
+- Vous ajouterez la documentation Swagger pour ces endpoints.
