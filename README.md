@@ -248,7 +248,7 @@ Avoir un coverage de test de 100% en plus des tests demandés par défaut. Pour 
 
 ### Weakness `(+1,5 points)`
 
-Ajouter un champ optionnel `weakness` à la table `PokemonCard` qui contiendra le type de pokémon qui est faible contre le pokémon en question.
+Ajouter un champ optionnel `weakness` à la table `PokemonCard` qui contiendra le type de pokémon qui est faible contre le pokémon en question. Mettez à jour la documentation Swagger.
 
 > Attention à la dupplication de la relation entre les types.
 
@@ -293,20 +293,13 @@ Ajouter la possibilité de gérer des decks de cartes pokémons. Un deck est une
 - Vous ajouterez la documentation Swagger pour ces endpoints.
 
 
-### Collection (`+3 points`)
+### Collection (`+2 points`)
 
-Ajouter la possibilité d'avoir une collection de cartes. Une colection est un ensemble de carte appartenant à un joueur en particulier. Vous ajouterez une table `collection` qui contiendra les informations ci-dessous.
-
-| Nom   | Type               | Propriété            | Description                |
-| ----- | ------------------ | -------------------- | -------------------------- |
-| id    | Number             | clé primaire         | Identifiant unique du deck |
-| card | REF(PokemonCard) | requis, relation N-N | Carte appartenant à la collection             |
-| owner | REF(User)          | requis, relation 1-1 | Propriétaire du deck       |
+Ajouter un champs collection pour permettre à un utilisateur d'avoir une collection de cartes. 
 
 - Un utilisateur ne possède qu'une seule collection.
-- Une carte pokémon peut appartenir à plusieurs collections (relation N-N).
-- Vous ajouterez aussi des endpoints pour gérer ces collections (CRUD).
-- Lorsque la collection est créé vous baserez le propriétaire sur l'utilisateur connecté (via son JWT).
-- Pour les permissions vous vérifierez qu'il faut être connecté pour créer, modifier ou supprimer une collection.
+- Une carte pokémon peut appartenir à plusieurs détenteurs.
+- Vous ajouterez un endpoint spécifique à user pour ajouter des cartes à la collection d'un utilisateur.
+- Pour les permissions vous vérifierez qu'il faut être connecté pour cet endpoint.
 - Vous ajouterez des tests pour ces endpoints.
-- Vous ajouterez la documentation Swagger pour ces endpoints.
+- Vous mettrez la documentation Swagger à jour.
